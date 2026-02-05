@@ -72,9 +72,9 @@
                     {% endif %}
                     {% if user.is_authenticated and comment.author == user %}
                         <button class="btn btn-delete"
-                            comment_id="{{ comment.id }}">Delete</button>
+                            data-comment_id="{{ comment.id }}">Delete</button>
                         <button class="btn btn-edit"
-                            comment_id="{{ comment.id }}">Edit</button>
+                            data-comment_id="{{ comment.id }}">Edit</button>
                 {% endif %}
                 </div>
                 <!-- Our for loop ends here -->
@@ -110,8 +110,8 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title"
-          id="deleteModalLabel">Delete comment?</h5>
+        <h4 class="modal-title"
+          id="deleteModalLabel">Delete comment?</h4>
         <button type="button" class="btn-close"
           data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
