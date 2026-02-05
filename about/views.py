@@ -4,6 +4,7 @@ from django.contrib import messages
 from .models import About
 from .forms import CollaborateRequestForm
 
+
 # Create your views here.
 def about_page(request):
     """
