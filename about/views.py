@@ -8,16 +8,19 @@ from .forms import CollaborateRequestForm
 # Create your views here.
 def about_page(request):
     """
-    Display the About page.
+    Renders the most recent information on the website author
+    and allows user collaboration requests.
+
+    Displays an individual instance of :model:`about.About`.
 
     **Context**
-
     ``about``
-        The first (and only) instance of :model:`about.About`.
-
-    **Template:**
-
-    :template:`about.html`
+        The most recent instance of :model:`about.About`.
+        ``collaborate_form``
+            An instance of :form:`about.CollaborateForm`.
+    
+    **Template**
+    :template:`about/about.html`
     """
     about_queryset = About.objects.all().order_by('-updated_on').first()
 
